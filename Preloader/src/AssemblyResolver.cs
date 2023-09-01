@@ -10,7 +10,6 @@ public static class AssemblyResolver {
     const string patchDirectory = "patch";
     
     public static void LoadAssemblies() {
-        
         // Path to current directory
         string dir = IO.Directory.GetCurrentDirectory() + "\\";
         
