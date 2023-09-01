@@ -1,4 +1,4 @@
-# Patch preload project for Godot mono
+# Patch preloading - Godot Mono
 
 Tested in Godot Mono version 3.5.2
 
