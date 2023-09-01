@@ -1,7 +1,14 @@
 # Godot-specific ignores
+.builds/
 .import/
+*.import
 export.cfg
 export_presets.cfg
+
+# Editor-specific ignores
+.vscode/
+.idea/
+.vs/
 
 # Imported translations (automatically generated from CSV files)
 *.translation
