@@ -47,7 +47,7 @@ To solve this issue, I made a simple preload project that can be used to find th
 
 - Make sure that the "patchDirectory" string in AssemblyResolver.cs matches your patch folder's name.
 
-- Make sure that the "mainScenePath" string in Preload.cs matches the path to to the mainScene in your patch.
+- Make sure that the "mainScenePath" string in Preload.cs matches the path to to the main scene in your patch.
 
 - The patch/mod should ideally be created in a separate project, otherwise there might be some assembly conflicts because of the way Godot handles assemblies.
 

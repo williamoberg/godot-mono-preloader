@@ -22,7 +22,7 @@ public static class AssemblyResolver {
             ProjectSettings.LoadResourcePack((dir + file).Replace(".dll", ".pck"));
         }
 
-        PrintAssemblyTypes(); // DEBUG
+        //PrintAssemblyTypes(); // DEBUG
     }
     
     static void PrintAssemblyTypes() {
