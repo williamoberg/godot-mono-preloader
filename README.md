@@ -14,7 +14,7 @@ before loading in the .pck-file, as described here:
 
 ![Screenshot form docs](docs_screenshot.png)
 
-Even though this does load the DLL, the C#-scripts inside the new .pck-file can still NOT be accessed and when loading in scenes from the new .pck-file, they load in with the either old versions of the scripts or none at all and throws an error.
+Even though this does load the DLL, the C#-scripts inside the new .pck-file can still NOT be accessed and when loading in scenes from the new .pck-file. Instead they load in with the either old versions of the scripts or none at all and throws an error.
 
 To solve this issue, I made a simple preload project that can be used to find the correct scripts from the new assemblies and load them into the associated scenes/nodes at runtime.
 
@@ -31,13 +31,13 @@ To solve this issue, I made a simple preload project that can be used to find th
 
         .mono\assemblies\Release
         or:
-        .mono\assemblies\Release
+        .mono\assemblies\Debug
 
 - Place the .pck-file and .dll-file in:
 
         Preload/patch
         or:
-        Preload/builds/patch
+        Preload/.builds/patch
 
     depending on if you are running the game from the player/editor or the exported build.
 
@@ -49,7 +49,7 @@ To solve this issue, I made a simple preload project that can be used to find th
 
 - Make sure that the "mainScenePath" string in Preload.cs matches the path to to the main scene in your patch.
 
-- The patch/mod should ideally be created in a separate project, otherwise there might be some assembly conflicts because of the way Godot handles assemblies.
+- The patch/mod should ideally be created in a separate project, otherwise there might be some assembly name conflicts with the currently loaded assembly.
 
 - This project is pretty simple and only loads one scene with the associated scripts from the .pck-resource on startup. This can of course be expanded on for more functionality based on specific needs.
 
